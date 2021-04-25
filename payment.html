@@ -1,0 +1,160 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Payment Form </title>  
+<style> 
+</head>    
+<body> 
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style> 
+<link rel="stylesheet" type="text/css"href=consultation.css>  
+   
+    <center> <h1>Payment</h1> </center>   
+    <form method="POST">
+	<h4>Account</h4>
+	<div class="input-group">
+	<div class="input-box">
+	<input type="name"
+	placeholder="Full Name"required
+	class="name">
+	
+	<i class="fa fa-user icon"></i>
+	</div>
+	</div>
+	<div class="input-group">
+	<div class="input-box">
+	<input type="email"
+	placeholder="Email Adress" required
+	<i class="fa fa-envelope"></i>
+	</div>
+	</div>
+	<div class="input-group">
+	<div class ="input-box">
+	<h4>Date of Birth</h4>
+	<input type="name" placeholder="DD"
+	class="dob">
+	<input type="name" placeholder="MM"
+	class="dob">
+	<input type="name"
+	placeholder="YYYY" class="dob">
+	</div>
+	<div class="input-box">
+	<h4>Gender</h4>
+	<input type="radio" id="b1"
+	name="gender"checked class="radio">
+	<label for="b2">Female</label>
+	<input type="radio" id="b2"
+	name="gender"checked class="radio">
+	<label for="b2">male</label>
+	</div>
+	</div>
+	<label>Choose a Payment Options:</label>
+                <select>
+                        <option value="first">MiPay</option>
+                        <option value="Second">Canara-Bank-App</option>
+                        <option value="third">Paypal</option>
+						<option value="Second">Credit cards</option>
+                        <option value="third">Mobile payments</option>
+			    </select>
+	<div class="input-group">
+	<div class="input-box">
+	<h4>Payment Details</h4>
+	<input type="radio" name="pay"
+	id="bc1" checked class="radio">
+	<label for="bc1"><span><i class="fa
+	fa-cc-visa"></i> MiPay</
+	span></label>
+	<input type="radio" name="pay"
+	id="bc2" class="radio">
+	<label for="bc2"><span><i class="fa
+	fa-cc-paypal"></i>Canara-Bank-App</span></
+	label>
+	<input type="radio" name="pay"
+	id="bc1" checked class="radio">
+	<label for="bc1"><span><i class="fa
+	fa-cc-visa"></i> Paypal</
+	span></label>
+	<input type="radio" name="pay"
+	id="bc1" checked class="radio">
+	<label for="bc1"><span><i class="fa
+	fa-cc-visa"></i> Credit cards</
+	span></label>
+	<input type="radio" name="pay"
+	id="bc1" checked class="radio">
+	<label for="bc1"><span><i class="fa
+	fa-cc-visa"></i> Mobile payments</
+	span></label>
+	</div>
+	</div>
+	<div class="input-group">
+	<div class="input-box">
+	<input type="tel" placeholder="Card Number" required class="name">
+	<i class="fa fa-credit-card icon"></i>
+	</div>
+	</div>
+	<div class="input-group">
+	<div class="input-box">
+	<input type="tel" placeholder="card CVC" required class="name">
+	<i class="fa fa-user icon"></i>
+	</div>
+	<div class="input-group">
+	<div class="input-box">
+	<input type="tel" placeholder="Enter amount" required class="name">
+	<i class="fa fa-user icon"></i>
+	<div class="input-box">
+	<select>
+	<option>01 jun</option>
+	<option>02 jun</option>
+	<option>03 jun</option>
+	</select>
+	<select>
+	<option>2020</option>
+	<option>2021</option>
+	<option>2022</option>
+	</select>
+	</div>
+	</div>
+	<div class ="input-group">
+	<div class="input-box">
+	<center><button type="submit" style="height:45px;width:100px">PAY NOW</center>
+	</div>
+	</div>
+	

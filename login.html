@@ -1,0 +1,102 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style> 
+<link rel="stylesheet" type="text/css"href=consultation.css>  
+</head>    
+<body>    
+    <center> <h1>Login Form</h1> </center>   
+    <form>  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="name" placeholder="Enter Username" name="username" required><br>  
+            <label>Password : </label>   
+            <input type="Integer" placeholder="Enter Password" name="password" required><br>
+            <button type="submit" style="height:45px;width:100px">Login</button>  
+            <input type="checkbox" checked="checked"> Remember me   <br>
+            <button type="button" style="height:45px;width:100px">cancelbtn</button>   
+            Forgot <a href="#"> password? </a>  
+			</div>   
+    </form>     
+</body> 
+<script>
+
+    var fm=document.getElementById("myform");
+    function showEle(obj){
+        var a=document.getElementById("show");
+        
+       var str= `<h5>Name: ${obj.Name}</h5>
+        <h5>email: ${obj.Password}</h5>
+        
+        a.innerHTML=str;
+    
+    }
+function Validate(){
+    var Name=document.getElementById("name").value;
+    var Email=document.getElementById("password").value;
+    
+    if(Name.length==0 ){
+        alert("Enter name");
+        return false;
+    }
+    if(Email.length==0 ){
+        alert("Enter password");
+        return false;
+    }
+    
+    }
+   
+    const obj1={Name:Name,Password:password}
+    
+    showEle(obj1);
+
+    
+}
+
+fm.addEventListener("submit",function(event)
+{
+    event.preventDefault();
+    Validate();
+})    
+</html>  

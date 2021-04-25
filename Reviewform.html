@@ -1,0 +1,153 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Review Form </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style> 
+<link rel="stylesheet" type="text/css"href=consultation.css>  
+</head>    
+<body>    
+    <center> <h1> Patient Review Form</h1> </center>   
+    <form>  
+        <div class="container">
+		<!DOCTYPE html>
+<html>
+<head>
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
+</head>
+<body>
+<label>Username : </label>   
+            <input type="name" placeholder="Enter Username" name="Name" required><br> 
+<div class="stars">
+  <form action="stars">
+   <label>Review : </label> <br>
+   
+    <input class="star star-5" id="star-5" type="radio" name="star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star"/>
+    <label class="star star-1" for="star-1"></label>
+  </form><br>
+  
+<label>Comments : </label>   
+            <input type="text" placeholder="Enter Your Comments" name="Comments" required><br>
+ <label>Suggestion : </label>   
+            <input type="text" placeholder="Suggestion" name="suggestion" required><br>  			
+ 			<center><button type="submit" style="height: 45px;width:100px">Submit</button></center
+  
+</div>
+
+</body>
+<script>
+
+    var fm=document.getElementById("myform");
+    function showEle(obj){
+        var a=document.getElementById("show");
+        
+       var str= `<h5>Name: ${obj.Name}</h5>
+        <h5>email: ${obj.username}</h5>
+        <h5>Address: ${obj.review}</h5>
+        <h5>Contact: ${obj.comments}</h5>
+        <h5>pin code: ${obj.suggestion}</h5>
+       
+        a.innerHTML=str;
+    
+    }
+function Validate(){
+    var Name=document.getElementById("username").value;
+    var Email=document.getElementById('review').value;
+    var Address=document.getElementById('comments').value;
+    var Mobile=document.getElementById('Contact').value;
+    var pincode=document.getElementById('suggestion').value;
+   
+    if(Name.length==0 ){
+        alert("Enter user name");
+        return false;
+    }
+    if(Email.length==0 ){
+        alert("Enter review");
+        return false;
+    }
+    if(Address.length==0 ){
+        alert("Enter comments");
+        return false;
+    }
+    if(Mobile.length==0 ){
+        alert("mobile no can't be blank");
+        return false;
+    }
+    if(pincode.length==0 ){
+        alert("Enter the suggestion");
+        return false;
+
+        
+    }
+
+
+    const obj1={Name:User Name,Review:review,Comments:comments,Mobile:Mobile,Suggestion:suggestion}
+    
+    
+    showEle(obj1);
+
+    
+}
+
+fm.addEventListener("submit",function(event)
+{
+    event.preventDefault();
+    Validate();
+})
+
+
+</script>
+</html>

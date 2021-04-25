@@ -1,0 +1,151 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Patient Form </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style> 
+<link rel="stylesheet" type="text/css"href=consultation.css>  
+</head>  
+<body>    
+    <center> <h1>Patient form</h1> </center>   
+    <form>  
+        <div class="container">
+        	
+            <label>Patientname : </label>   
+            <input type="name"    placeholder= "Enter Patientname" name="patientname" required><br> 
+            <label>Appointment : </label>   
+            <input type="text"    placeholder= "Enter Reason"      name="reason" required>
+			<label>Contact No  : </label>   
+            <input type="integer" placeholder= "Enter Ph.No"      name="number" required><br>
+			<label>Location    : </label>   
+            <input type="name"    placeholder= "Enter Location"    name="locationname" required><br>
+			<label>Consultation History : </label>  
+<div id="wrapper">
+<label for="yes_no_radio">Is there any consultation history?</label>
+<p>
+<input type="radio" name="yes_no" checked>Yes</input>
+</p>
+<p>
+<input type="radio" name="yes_no">No</input>
+</p>				
+             
+			<label>Consultation Scheduled : </label>   
+            <input type="text" placeholder="Consultation Scheduled" name="visitdoctor" required>
+			<label>Health history : </label> 
+<div id="wrapper">
+<label for="yes_no_radio">Is there any health history?</ label>
+<p>
+<input type="radio" name="yes_no" checked>Yes</input>
+</p>
+<p>
+<input type="radio" name="yes_no">No</input>
+</p>
+            <label>If Yes: </label> 			
+            <input type="text" placeholder="Enter your health history" name="healthhistory" required>
+			
+            <center><button type="submit" style="height: 45px;width:100px">Submit</button></center>   
+            <center><button type="button" style="height: 45px;width:100px">Cancel</button><center>   
+          
+        </div>   
+    </form>     
+</body>
+<script>
+
+    var fm=document.getElementById("myform");
+    function showEle(obj){
+        var a=document.getElementById("show");
+        
+       var str= `<h5>Name: ${obj.Name}</h5>
+        <h5>email: ${obj.patient name}</h5>
+        <h5>Address: ${obj.enter reason}</h5>
+        <h5>Contact: ${obj.phone no}</h5>
+        <h5>pin code: ${obj.location}</h5>
+        
+        a.innerHTML=str;
+    
+    }
+function Validate(){
+    var Name=document.getElementById("patient name").value;
+    var Email=document.getElementById('reason').value;
+    var Address=document.getElementById('Address').value;
+    var Mobile=document.getElementById('phoneno').value;
+    var pincode=document.getElementById('location').value;
+   
+    
+    if(Name.length==0 ){
+        alert("Enter patient  name");
+        return false;
+    }
+    if(Email.length==0 ){
+        alert("Enter reason");
+        return false;
+    }
+    if(Address.length==0 ){
+        alert("Enter Address");
+        return false;
+    }
+    if(Mobile.length==0 ){
+        alert("phone no can't be blank");
+        return false;
+    }
+    if(pincode.length==0 ){
+        alert("Enter the location");
+        return false;
+
+    }
+    
+
+    const obj1={Name:patient Name,Name:Reason,Address:Address,Mobile:phone no,location:location}
+    
+    
+    showEle(obj1);
+
+    
+}
+
+fm.addEventListener("submit",function(event)
+{
+    event.preventDefault();
+    Validate();
+})
+     
+</html>  		
